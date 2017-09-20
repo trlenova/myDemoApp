@@ -18,9 +18,10 @@ public class App
       System.out.println("inside search");
       if (array == null) return false;
       else if(hece==null) return false;
-      int sayi==0;
+      int sayi=0;
       for (String elt : array) {
-        if (elt.indexOf(hece)>=0) sayi++;
+        if (elt.indexOf(hece)>=0) 
+	sayi++;
      
       }
       return sayi==count;
@@ -55,7 +56,7 @@ public class App
          Map map = new HashMap();
           map.put("result", result);
           return new ModelAndView(map, "compute.mustache");
-        }, new MustacheTemplateEngine());
+        } new MustacheTemplateEngine());
 
 
         get("/compute",
